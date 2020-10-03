@@ -24,10 +24,10 @@ public class LambdaExpressions
  * 					as i/p to forEach for iteration
  *
  */
-class CustomConsumer implements Consumer<Integer>{
+class CustomConsumer implements Consumer<Number>{
 	@Override
-	public void accept(Integer t) {
-		System.out.println("The number through proper class " + t);
+	public void accept(Number t) {
+			System.out.println("The double number through proper class " + t.doubleValue());
 		
 	}
 }
