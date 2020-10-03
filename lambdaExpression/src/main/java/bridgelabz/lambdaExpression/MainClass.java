@@ -19,33 +19,9 @@ public class MainClass
     public static void main( String[] args )
     {
     	
-    	List<Integer> numbers = Arrays.asList(1,2,3,4,5);
-    	
-    	/**
-    	 * Printing through proper class
-    	 */
+    	List<Number> numbers = Arrays.asList(1,2d,3l,4l,5d);
     	CustomConsumer action = new CustomConsumer();
     	numbers.forEach(action);
-    	
-    	
-    	/**
-    	 * Printing through Anonymous class creation
-    	 */
-    	numbers.forEach(new Consumer<Integer>() {
-    		@Override
-    		public void accept(Integer t) {
-    			System.out.println("The number through anonymous class " + t );
-    		};
-		});
-    	
-    	
-    	/**
-    	 * Printing using lambda function
-    	 */
-    	Consumer<Integer> consumerObj = t -> {System.out.println("The number through "
-    										+ "lambda function " + t);
-    										 };
-    	numbers.forEach(consumerObj);
     }
 }
 
