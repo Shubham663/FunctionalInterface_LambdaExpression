@@ -19,7 +19,7 @@ public class MainClass
     public static void main( String[] args )
     {
     	
-    	List<Number> numbers = Arrays.asList(1,2d,3l,4l,5d);
+    	List<Integer> numbers = Arrays.asList(2,2,3,4,5);
     	CustomConsumer action = new CustomConsumer();
     	numbers.forEach(action);
     }

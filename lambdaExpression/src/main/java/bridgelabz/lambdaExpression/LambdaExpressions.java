@@ -1,6 +1,7 @@
 package bridgelabz.lambdaExpression;
 
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 /**
  * Hello world!
@@ -24,10 +25,12 @@ public class LambdaExpressions
  * 					as i/p to forEach for iteration
  *
  */
-class CustomConsumer implements Consumer<Number>{
+class CustomConsumer implements Consumer<Integer>{
 	@Override
-	public void accept(Number t) {
-			System.out.println("The double number through proper class " + t.doubleValue());
-		
+	public void accept(Integer t) {
+			Predicate<Integer> evenNumber = (y) -> (y % 2 == 0);
+			if (evenNumber.test(t))
+				System.out.println("The double number through proper class " + t.doubleValue());
+//		}
 	}
 }
