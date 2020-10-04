@@ -1,5 +1,6 @@
 package bridgelabz.lambdaExpression;
 
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -17,7 +18,13 @@ interface MathFunctions{
 }
 public class LambdaExpressions 
 {
+	public void forEachDemo(List<Integer> list) {
+		list.forEach(this::print);
+	}
 	
+	public void print(Integer k) {
+    	System.out.println("The number through class method is " + k);
+    }
 }
 
 /**

@@ -20,8 +20,14 @@ public class MainClass
     {
     	
     	List<Integer> numbers = Arrays.asList(2,2,3,4,5);
-    	CustomConsumer action = new CustomConsumer();
-    	numbers.forEach(action);
+//    	CustomConsumer action = new CustomConsumer();
+    	/**
+    	 * printing list of numbers without consumer object
+    	 */
+    	numbers.forEach( System.out::println  );
+    	LambdaExpressions lE = new LambdaExpressions();
+    	lE.forEachDemo(numbers);
     }
+    
 }
 
